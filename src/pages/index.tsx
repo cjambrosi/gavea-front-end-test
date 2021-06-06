@@ -7,8 +7,8 @@ export default function Home() {
         <title>Gavea Marketplace - Home</title>
       </Head>
       <main>
-          teste
-          <i className="icon-email"></i>
+        teste
+        <i className="icon-email"></i>
       </main>
     </>
   )
