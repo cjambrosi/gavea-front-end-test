@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'gavea-icons';
+  src:  url('fonts/gavea-icons.eot?r5ym4q');
+  src:  url('fonts/gavea-icons.eot?r5ym4q#iefix') format('embedded-opentype'),
+    url('fonts/gavea-icons.ttf?r5ym4q') format('truetype'),
+    url('fonts/gavea-icons.woff?r5ym4q') format('woff'),
+    url('fonts/gavea-icons.svg?r5ym4q#gavea-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'gavea-icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-email:before {
+  content: "\e900";
+  color: #748c94;
+}
+.icon-eye-closed:before {
+  content: "\e901";
+  color: #b1bec2;
+}
+.icon-eye-open:before {
+  content: "\e902";
+  color: #b1bec2;
+}
+.icon-password:before {
+  content: "\e903";
+  color: #748c94;
+}
+.icon-person:before {
+  content: "\e904";
+  color: #748c94;
+}
