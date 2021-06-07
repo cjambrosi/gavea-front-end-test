@@ -3,7 +3,7 @@ import { Welcome } from '../components/Welcome'
 
 export default function Home() {
   return (
-    <div className="teste">
+    <div className="container">
       <Head>
         <title>Gavea Marketplace</title>
       </Head>

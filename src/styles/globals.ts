@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
 
 :root {
   --white: #FFFFFF;
+  --transparent: transparent;
   --gray-100: #D2E3EF;
   --gray-400: #B1BEC2;
   --gray-600: #748C94;
@@ -58,5 +59,12 @@ button {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 `

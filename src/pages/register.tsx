@@ -5,7 +5,7 @@ import { SignUp } from '../components/SignUp'
 
 export default function Register() {
   return (
-    <div className="teste">
+    <div className="container">
       <Head>
         <title>Cadastro - Gavea Marketplace</title>
       </Head>

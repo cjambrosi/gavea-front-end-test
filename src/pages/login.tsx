@@ -5,7 +5,7 @@ import { SignIn } from '../components/SignIn'
 
 export default function Login() {
   return (
-    <div className="teste">
+    <div className="container">
       <Head>
         <title>Login - Gavea Marketplace</title>
       </Head>
