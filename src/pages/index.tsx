@@ -1,15 +1,13 @@
 import Head from 'next/head'
+import { Welcome } from '../components/Welcome'
 
 export default function Home() {
   return (
-    <>
+    <div className="teste">
       <Head>
-        <title>Gavea Marketplace - Home</title>
+        <title>Gavea Marketplace</title>
       </Head>
-      <main>
-        teste
-        <i className="icon-email"></i>
-      </main>
-    </>
+      <Welcome />
+    </div>
   )
 }
