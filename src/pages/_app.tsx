@@ -1,4 +1,5 @@
 import { AppProps } from 'next/app'
+import { AuthProvider } from '../hooks/useAuth'
 import Router from 'next/router'
 import NProgress from 'nprogress'
 
@@ -15,10 +16,10 @@ Router.events.on('routeChangeError', () => NProgress.done())
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <AuthProvider>
       <Component {...pageProps} />
       <GlobalStyle />
-    </>
+    </AuthProvider>
   )
 }
 
