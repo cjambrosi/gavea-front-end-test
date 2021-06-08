@@ -1,14 +1,25 @@
-import { useEffect, useState } from 'react'
+import { ChangeEvent, useEffect, useState } from 'react'
 import { InputBlock, InputElement, Icon } from './styles'
 
 interface InputProps {
   type: string
+  name: string
+  value: string
   placeholder: string
   leftIcon: string
   rigthIcon?: boolean
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void
 }
 
-export function Input({ type, leftIcon, rigthIcon, placeholder }: InputProps) {
+export function Input({
+  type,
+  value,
+  name,
+  onChange,
+  leftIcon,
+  rigthIcon,
+  placeholder
+}: InputProps) {
   const [passwordShown, setPasswordShown] = useState(type)
   const [openEye, setOpenEye] = useState('icon-eye-open')
 
@@ -27,7 +38,13 @@ export function Input({ type, leftIcon, rigthIcon, placeholder }: InputProps) {
   return (
     <InputBlock>
       <Icon className={`icon ${leftIcon}`}></Icon>
-      <InputElement type={passwordShown} placeholder={placeholder} />
+      <InputElement
+        type={passwordShown}
+        name={name}
+        onChange={onChange}
+        value={value}
+        placeholder={placeholder}
+      />
       {rigthIcon && (
         <Icon
           className={`icon ${openEye}`}

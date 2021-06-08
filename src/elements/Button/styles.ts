@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 interface ButtonElementProps {
+  type: string
   backgroundColor: string
   borderColor: string
   textColor: string

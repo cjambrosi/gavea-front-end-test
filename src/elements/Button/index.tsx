@@ -1,14 +1,16 @@
 import { ButtonElement } from './styles'
 
 interface ButtonProps {
+  typeButton: 'button' | 'submit'
   text: string
   backgroundColor: string
   borderColor: string
   textColor: string
-  handleRedirectTo: () => void
+  handleRedirectTo?: () => void
 }
 
 export function Button({
+  typeButton,
   text,
   backgroundColor,
   borderColor,
@@ -17,7 +19,7 @@ export function Button({
 }: ButtonProps) {
   return (
     <ButtonElement
-      type="button"
+      type={typeButton}
       backgroundColor={backgroundColor}
       borderColor={borderColor}
       textColor={textColor}
