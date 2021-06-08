@@ -27,6 +27,7 @@ export function Welcome() {
         </Title>
         <ButtonContainer>
           <Button
+            typeButton="button"
             text="Entrar"
             backgroundColor="--orangey-600"
             borderColor="--orangey-600"
@@ -35,6 +36,7 @@ export function Welcome() {
           />
 
           <Button
+            typeButton="button"
             text="Criar conta"
             backgroundColor="--transparent"
             borderColor="--white"
