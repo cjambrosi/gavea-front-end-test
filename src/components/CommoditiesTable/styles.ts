@@ -6,11 +6,11 @@ export const Table = styled.section`
 
 export const TableHead = styled.div`
   display: grid;
-  grid-template-columns: 2.5fr repeat(3, 1fr);
+  grid-template-columns: 2.5fr 0.8fr 0.9fr 1.2fr;
   grid-gap: 10px;
   align-items: center;
-  padding-left: 0.938rem;
-  padding-right: 0.625rem;
+  margin-left: 0.938rem;
+  margin-right: 0.625rem;
   margin-bottom: 4px;
 
   .text {
