@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
-export const Item = styled.div`
+interface ItemProps {
+  operation: string
+}
+
+export const Item = styled.div<ItemProps>`
   display: grid;
   grid-template-columns: 2.5fr repeat(3, 1fr);
   grid-gap: 10px;
@@ -29,7 +33,10 @@ export const Item = styled.div`
       width: 5px;
       position: absolute;
       left: 0;
-      background: var(--green-400);
+      background: var(
+        ${({ operation }) =>
+          operation === 'increased' ? '--green-400' : '--red-400'}
+      );
     }
 
     .flex-info {
@@ -52,12 +59,11 @@ export const Item = styled.div`
       line-height: 107.6%;
     }
 
-    .increased {
-      color: var(--green-400);
-    }
-
-    .decreased {
-      color: var(--red-400);
+    .operation {
+      color: var(
+        ${({ operation }) =>
+          operation === 'increased' ? '--green-400' : '--red-400'}
+      );
     }
   }
 `

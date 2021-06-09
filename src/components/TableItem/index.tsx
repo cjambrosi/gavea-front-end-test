@@ -1,24 +1,40 @@
 import { Item } from './styles'
 
-export function TableItem() {
+interface TableItemProps {
+  part: string
+  pag: string
+  ton: string
+  value: string
+  operation: string
+  imageName: string
+}
+
+export function TableItem({
+  part,
+  pag,
+  ton,
+  value,
+  operation,
+  imageName
+}: TableItemProps) {
   return (
-    <Item className="item-table">
+    <Item className="item-table" operation={operation}>
       <div className="flex-info">
         <img
-          src="/assets/images/commodities/avatar01.png"
-          alt="AgAmerica"
+          src={`/assets/images/commodities/${imageName}.png`}
+          alt={part}
           className="image"
         />
-        <span className="text">AgAmerica</span>
+        <span className="text">{part}</span>
       </div>
       <div>
-        <span className="text">Fev/21</span>
+        <span className="text">{pag}</span>
       </div>
       <div>
-        <span className="text">2.000</span>
+        <span className="text">{ton}</span>
       </div>
       <div>
-        <span className="text">164,50</span>
+        <span className="text operation">{value}</span>
       </div>
     </Item>
   )
