@@ -5,13 +5,17 @@ import { parseCookies } from 'nookies'
 import { CommoditiesTable } from '../components/CommoditiesTable'
 import { DashboardHeader } from '../components/DashboardHeader'
 
-export default function Dashboard() {
+interface Dashboard {
+  name: string
+}
+
+export default function Dashboard({ name }: Dashboard) {
   return (
     <>
       <Head>
         <title>Home - Gavea Marketplace</title>
       </Head>
-      <DashboardHeader />
+      <DashboardHeader userName={name} />
       <CommoditiesTable />
     </>
   )
@@ -19,6 +23,7 @@ export default function Dashboard() {
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { ['gavea-token']: token } = parseCookies(context)
+  const { ['gavea-username']: name } = parseCookies(context)
 
   if (!token) {
     return {
@@ -30,6 +35,8 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   }
 
   return {
-    props: {}
+    props: {
+      name
+    }
   }
 }

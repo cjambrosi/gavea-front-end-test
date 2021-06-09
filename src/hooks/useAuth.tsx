@@ -29,7 +29,7 @@ interface AuthContextProps {
 const AuthContext = createContext({} as AuthContextType)
 
 export function AuthProvider({ children }: AuthContextProps) {
-  const COOKIE_MAX_AGE = 60 // 5 min
+  const COOKIE_MAX_AGE = 60 * 5 // 5 min
 
   const [user, setUser] = useState<User | null>(null)
   const isAuthenticated = !!user
@@ -41,13 +41,15 @@ export function AuthProvider({ children }: AuthContextProps) {
         const user = userCredential.user
         const { email, refreshToken } = userCredential.user
 
-        console.log(name, email, password)
-
         user.updateProfile({
           displayName: name
         })
 
         setCookie(undefined, 'gavea-token', refreshToken, {
+          maxAge: COOKIE_MAX_AGE
+        })
+
+        setCookie(undefined, 'gavea-username', name, {
           maxAge: COOKIE_MAX_AGE
         })
 
@@ -67,6 +69,10 @@ export function AuthProvider({ children }: AuthContextProps) {
         const { displayName: name, email, refreshToken } = userCredential.user
 
         setCookie(undefined, 'gavea-token', refreshToken, {
+          maxAge: COOKIE_MAX_AGE
+        })
+
+        setCookie(undefined, 'gavea-username', name, {
           maxAge: COOKIE_MAX_AGE
         })
 
