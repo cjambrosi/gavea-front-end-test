@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Welcome /> test title 1`] = `
+.c4 {
+  background: var(--orangey-600);
+  width: 100%;
+  height: 3.438rem;
+  border: 1px solid var(--orangey-600);
+  border-radius: 0.25rem;
+}
+
+.c4 .s-text {
+  color: var(--white);
+  font-size: 0.938rem;
+  text-transform: capitalize;
+}
+
+.c5 {
+  background: var(--transparent);
+  width: 100%;
+  height: 3.438rem;
+  border: 1px solid var(--white);
+  border-radius: 0.25rem;
+}
+
+.c5 .s-text {
+  color: var(--white);
+  font-size: 0.938rem;
+  text-transform: capitalize;
+}
+
+.c0 {
+  background: url('/assets/images/bakground-image.png') center;
+  background-size: cover;
+  height: 100vh;
+  padding: 0 21px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+.c0 .logo {
+  -webkit-transform: translateY(-30px);
+  -ms-transform: translateY(-30px);
+  transform: translateY(-30px);
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c2 {
+  color: var(--white);
+  font-family: var(--second-font-family);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 120%;
+  -webkit-letter-spacing: -0.02em;
+  -moz-letter-spacing: -0.02em;
+  -ms-letter-spacing: -0.02em;
+  letter-spacing: -0.02em;
+}
+
+.c3 {
+  margin-top: 2.813rem;
+}
+
+.c3 button ~ button {
+  margin-top: 0.938rem;
+}
+
+<div
+  class="c0"
+>
+  <img
+    alt="Gavea Marketplace"
+    class="logo"
+    src="/assets/images/logo.svg"
+  />
+  <section
+    class="c1"
+  >
+    <h1
+      class="c2"
+    >
+      Bem-vindo a 
+      <br />
+      sua bolsa digital 
+      <br />
+      de commodities
+    </h1>
+    <div
+      class="c3"
+    >
+      <button
+        class="c4"
+        type="button"
+      >
+        <span
+          class="s-text"
+        >
+          Entrar
+        </span>
+      </button>
+      <button
+        class="c5"
+        type="button"
+      >
+        <span
+          class="s-text"
+        >
+          Criar conta
+        </span>
+      </button>
+    </div>
+  </section>
+</div>
+`
