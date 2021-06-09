@@ -32,7 +32,7 @@ export const Item = styled.div<ItemProps>`
       border-radius: 4px 0px 0px 4px;
       width: 5px;
       position: absolute;
-      left: 0;
+      left: -1px;
       background: var(
         ${({ operation }) =>
           operation === 'increased' ? '--green-400' : '--red-400'}
