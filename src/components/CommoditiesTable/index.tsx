@@ -22,11 +22,6 @@ export function CommoditiesTable() {
         <TableItem />
         <TableItem />
         <TableItem />
-        <TableItem />
-        <TableItem />
-        <TableItem />
-        <TableItem />
-        <TableItem />
       </TableBody>
     </Table>
   )

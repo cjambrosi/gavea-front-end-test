@@ -32,4 +32,12 @@ export const TableBody = styled.div`
   height: 100vh;
   max-height: 405px;
   padding: 0 1.313rem;
+
+  @media (min-height: 700px) {
+    max-height: 455px;
+  }
+
+  @media (min-height: 810px) {
+    max-height: 573px;
+  }
 `
