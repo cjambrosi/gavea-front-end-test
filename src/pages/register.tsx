@@ -10,7 +10,7 @@ export default function Register() {
   return (
     <div className="container">
       <Head>
-        <title>Cadastro - Gavea Marketplace</title>
+        <title>Register - Gavea Marketplace</title>
       </Head>
       <MainContent>
         <SignUp />
