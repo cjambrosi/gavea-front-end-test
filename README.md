@@ -17,7 +17,7 @@ Test repository: <https://github.com/gaveamarketplace/frontend-application>
 
 To preview, open on smartphone or resize your browser for `375x667px` resolution, preferably.
 
-![gavea-mobile-test](https://user-images.githubusercontent.com/9125404/121452004-09efd000-c975-11eb-8119-c2aa861e652a.png)
+![gavea-mobile-test-1](https://user-images.githubusercontent.com/9125404/121452274-897d9f00-c975-11eb-95f1-59174974d7e6.png)
 
 ## Getting Started
 
