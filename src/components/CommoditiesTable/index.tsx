@@ -16,8 +16,6 @@ export function CommoditiesTable() {
     fetchData()
   }, [])
 
-  console.log(commodities)
-
   return (
     <Table>
       <TableHead>
