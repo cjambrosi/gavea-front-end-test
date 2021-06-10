@@ -18,8 +18,8 @@ type signInData = Omit<User, 'refreshToken' | 'name'>
 type AuthContextType = {
   isAuthenticated: boolean
   user: User
-  signIn: (data: signInData) => Promise<void>
-  signUp: (data: signUpData) => Promise<void>
+  signIn: (data: signInData) => Promise<{ code: string; message: string }>
+  signUp: (data: signUpData) => Promise<{ code: string; message: string }>
 }
 
 interface AuthContextProps {
@@ -35,7 +35,7 @@ export function AuthProvider({ children }: AuthContextProps) {
   const isAuthenticated = !!user
 
   async function signUp({ name, email, password }: signUpData) {
-    auth
+    const result = await auth
       .createUserWithEmailAndPassword(email, password)
       .then((userCredential) => {
         const user = userCredential.user
@@ -56,14 +56,18 @@ export function AuthProvider({ children }: AuthContextProps) {
         setUser({ name, email, refreshToken })
 
         Router.push('/home')
+
+        return { code: '200', message: 'Registered successfully' }
       })
       .catch(({ code, message }) => {
-        console.log(`Usuário não cadastro. ${code} - ${message}`)
+        return { code, message }
       })
+
+    return result
   }
 
   async function signIn({ email, password }: signInData) {
-    auth
+    const result = await auth
       .signInWithEmailAndPassword(email, password)
       .then((userCredential) => {
         const { displayName: name, email, refreshToken } = userCredential.user
@@ -79,10 +83,14 @@ export function AuthProvider({ children }: AuthContextProps) {
         setUser({ name, email, refreshToken })
 
         Router.push('/home')
+
+        return { code: '200', message: 'Login successfully completed' }
       })
       .catch(({ code, message }) => {
-        console.log(`Não foi possível efetuar o login. ${code} - ${message}`)
+        return { code, message }
       })
+
+    return result
   }
 
   return (
