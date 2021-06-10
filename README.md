@@ -52,6 +52,7 @@ Languages and Libraries
 - Firebase
 - Nookies
 - NProgress
+- Custom Icons, from the test images
 
 Framework
 
