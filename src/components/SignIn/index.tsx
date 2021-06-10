@@ -4,16 +4,18 @@ import { Button } from '../../elements/Button'
 import { Input } from '../../elements/Input'
 
 import { Wrapper, Title, ContentForm } from './styles'
+import { ErrorMessage } from '../ErrorMessage'
 
 export function SignIn() {
   const { signIn } = useAuth()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [errorCode, setErrorCode] = useState('')
 
   const handleSignIn = async (event: FormEvent) => {
     event.preventDefault()
 
-    signIn({ email, password })
+    signIn({ email, password }).then((error) => setErrorCode(error.code))
   }
 
   return (
@@ -55,6 +57,8 @@ export function SignIn() {
             borderColor="--orangey-600"
           />
         </ContentForm>
+
+        <ErrorMessage code={errorCode} />
       </Wrapper>
     </>
   )
