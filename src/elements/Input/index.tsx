@@ -9,16 +9,18 @@ interface InputProps {
   leftIcon: string
   rigthIcon?: boolean
   onChange: (event: ChangeEvent<HTMLInputElement>) => void
+  onBlur?: (event: ChangeEvent<HTMLInputElement>) => void
 }
 
 export function Input({
   type,
   value,
   name,
-  onChange,
   leftIcon,
   rigthIcon,
-  placeholder
+  placeholder,
+  onChange,
+  onBlur
 }: InputProps) {
   const [passwordShown, setPasswordShown] = useState(type)
   const [openEye, setOpenEye] = useState('icon-eye-open')
@@ -42,6 +44,7 @@ export function Input({
         type={passwordShown}
         name={name}
         onChange={onChange}
+        onBlur={onBlur}
         value={value}
         placeholder={placeholder}
       />
