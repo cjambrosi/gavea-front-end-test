@@ -17,7 +17,7 @@ Test repository: <https://github.com/gaveamarketplace/frontend-application>
 
 To preview, open on smartphone or resize your browser for `375x667px` resolution, preferably.
 
-![gavea-mobile-test](https://user-images.githubusercontent.com/9125404/121294252-71e5de00-c8c3-11eb-9752-81339a556e18.png)
+![gavea-mobile-test](https://user-images.githubusercontent.com/9125404/121452004-09efd000-c975-11eb-8119-c2aa861e652a.png)
 
 ## Getting Started
 
@@ -42,6 +42,44 @@ yarn dev
 ```
 
 Open the application in the address: <http://localhost:3000>
+
+## What was used
+
+Languages and Libraries
+
+- TypeScript
+- Styled Components
+- Firebase
+- Nookies
+- NProgress
+
+Framework
+
+- NextJS
+
+Test
+
+- Jest
+- Testing Library
+
+Linters
+
+- ESLint together with Pettier
+- CommitLint
+- Conventional Changelog
+- Husky
+
+Functionalities
+
+- Firebase SignUp
+- Firebase SignIn
+- Firestore list Commodities
+- Authentication JWT and Cookies
+- Routes Restriction
+- Animation when rendering pages with NProgress
+- Context API
+- Custom Hook
+- Automated Test
 
 ## Author
 
