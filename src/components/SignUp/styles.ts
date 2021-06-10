@@ -5,7 +5,6 @@ export const Wrapper = styled.section`
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  margin-top: -20px;
 `
 
 export const Title = styled.h2`

@@ -3,6 +3,7 @@ import { useAuth } from '../../hooks/useAuth'
 
 import { Button } from '../../elements/Button'
 import { Input } from '../../elements/Input'
+import { ErrorMessage } from '../ErrorMessage'
 import { Wrapper, Title, ContentForm } from './styles'
 
 export function SignUp() {
@@ -10,11 +11,13 @@ export function SignUp() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
+  const [errorCode, setErrorCode] = useState('')
 
   const handleCreateNewUser = async (event: FormEvent) => {
     event.preventDefault()
 
-    signUp({ name, email, password })
+    signUp({ name, email, password }).then((error) => setErrorCode(error.code))
   }
 
   return (
@@ -60,11 +63,11 @@ export function SignUp() {
           <Input
             type="password"
             name="confirm-passowrd-field"
-            value={password}
+            value={confirmPassword}
             placeholder="Confirmar Senha"
             leftIcon="icon-password"
             rigthIcon={true}
-            onChange={(event) => setPassword(event.target.value)}
+            onChange={(event) => setConfirmPassword(event.target.value)}
           />
         </div>
 
@@ -76,6 +79,8 @@ export function SignUp() {
           borderColor="--orangey-600"
         />
       </ContentForm>
+
+      <ErrorMessage code={errorCode} />
     </Wrapper>
   )
 }
