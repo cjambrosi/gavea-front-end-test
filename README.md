@@ -3,7 +3,10 @@
 # Gavea Front-end Test
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/12d76292-c347-403c-8e63-6c605148a2e5/deploy-status)](https://app.netlify.com/sites/gavea-front-end-test/deploys)
+![GitHub last commit](https://img.shields.io/github/last-commit/cjambrosi/gavea-front-end-test?color=%2379C83D&label=Last%20Commit)
+![GitHub repo size](https://img.shields.io/github/repo-size/cjambrosi/gavea-front-end-test?label=Repo.%20Size)
+<!-- [![Netlify Status](https://api.netlify.com/api/v1/badges/12d76292-c347-403c-8e63-6c605148a2e5/deploy-status)](https://app.netlify.com/sites/gavea-front-end-test/deploys) -->
+![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hw/cjambrosi/gavea-front-end-test?label=Hits)
 
 **Demo:** <https://gavea-front-end-test.netlify.app>
 
